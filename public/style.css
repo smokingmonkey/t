@@ -1,0 +1,351 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.abs {
+  position: absolute;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: lightblue;
+}
+
+body {
+  bottom: 0;
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: 0px 0px;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  background-color: #493070;
+  /* background-color: #5100d3; */
+  /* height: 720px; */
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.input_video {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 100px;
+}
+
+
+
+.input_video.selfie {
+  transform: scale(-1, 1);
+}
+
+/* .output_canvas {
+  transform: scale(1, -1);
+} */
+
+.output_canvas {
+  width: 100%;
+  height: auto;
+  position:  absolute;
+  top: 0;
+  left: 0;
+  
+  /* margin-top: 100px; */
+}
+/* 
+#videoScreen {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+ 
+  align-items: center;
+  backface-visibility: hidden;
+  justify-content: center;
+  text-align: center;
+} */
+
+.logo {
+  bottom: 10px;
+  right: 20px;
+}
+.logo .title {
+  color: white;
+  font-size: 28px;
+}
+.logo .subtitle {
+  position: relative;
+  color: white;
+  font-size: 10px;
+  left: -30px;
+  top: 20px;
+}
+
+.control-panel {
+  position: absolute;
+  left: -200px;
+  top: 10px;
+  
+}
+
+.loading {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 20%;
+  left: 0;
+  align-items: center;
+  backface-visibility: hidden;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.shoutout .message {
+  position: absolute;
+  top: 58%;
+  font-family: 'Titillium Web', sans-serif;
+  
+  color: rgb(236, 236, 236);
+  font-size: 320%;
+  
+}
+
+.shoutout .messageFinal {
+  display: none;
+  position: absolute;
+  top: 58%;
+  font-family: 'Titillium Web', sans-serif;
+  
+  color: rgb(202, 202, 202);
+  font-size: 320%;
+  
+}
+.loading .spinner1 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  right: 490px;
+  animation: spin2 1s linear infinite;
+  border: 20px solid#e71f6c;
+  border-top: 50px solid #49307000;
+  border-radius: 50%;
+}
+.loading .spinner2 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 490px;
+  animation: spin 1s linear infinite;
+  border: 20px solid #161616;
+  border-top: 50px solid #49307000;
+  border-radius: 50%;
+}
+
+.loaded .loading {
+  opacity: 0;
+}
+
+.shoutout {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  backface-visibility: hidden;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#iniciar {
+  font-family: 'Titillium Web', sans-serif;
+  color: rgba(102, 8, 8, 0);
+  font-size: 200%;
+
+  display: none;
+  position: absolute;  
+  width: 200px;
+  height: 200px;
+  top: 0;
+  right: 0;
+  align-items: center;
+  backface-visibility: hidden;
+  justify-content: center;
+  
+  opacity: 1;
+  transition: opacity 10s;
+  background-color: rgba(123, 231, 22, 0);
+}
+
+#terminar {
+  font-family: 'Titillium Web', sans-serif;
+  color: rgba(255, 255, 255, 0);
+  font-size: 200%;
+  display: none;
+  position: absolute;  
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  align-items: center;
+  backface-visibility: hidden;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 10s;
+  background-color: rgba(245, 84, 10, 0);
+}
+
+/* #iniciar {
+  display: flex;
+  position: absolute;
+  top: 100;
+  right: 0%;
+  width: 10%;
+  height: 20%;
+  align-items: center;
+  backface-visibility: hidden;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(92, 178, 207);
+} */
+
+#col-1 {
+  position: fixed;
+  width: 50%;
+  left: 0;
+  height: 100%;
+  background-color: hsla(182, 100%, 50%, 0.212);
+  z-index: 1010101010
+}
+
+#col-2 {
+  position: fixed;
+  width: 50%;
+  left: 5%;
+  height: 100%;
+  background-color: hsla(340, 100%, 49%, 0.185);
+  z-index: 1010101010
+}
+#col-3 {
+  position: fixed;
+  width: 50%;
+  left: 10%;
+  height: 100%;
+  background-color: hsla(182, 100%, 50%, 0.212);
+  z-index: 1010101010
+}
+
+#col-4 {
+  position: fixed;
+  width: 50%;
+  left: 15%;
+  height: 100%;
+  background-color: hsla(340, 100%, 49%, 0.185);
+  z-index: 1010101010
+}
+
+
+#col-5 {
+  position: fixed;
+  width: 50%;
+  left: 20%;
+  height: 100%;
+  background-color: hsla(182, 100%, 50%, 0.212);
+  z-index: 1010101010
+}
+
+#col-6 {
+  position: fixed;
+  width: 50%;
+  left: 25%;
+  height: 100%;
+  background-color: hsla(340, 100%, 49%, 0.185);
+  z-index: 1010101010
+}
+#col-7 {
+  position: fixed;
+  width: 50%;
+  left: 30%;
+  height: 100%;
+  background-color: hsla(182, 100%, 50%, 0.212);
+  z-index: 1010101010
+}
+
+#col-8 {
+  position: fixed;
+  width: 50%;
+  left: 35%;
+  height: 100%;
+  background-color: hsla(340, 100%, 49%, 0.185);
+  z-index: 1010101010
+}
+
+
+#col-9 {
+  position: fixed;
+  width: 50%;
+  left: 40%;
+  height: 100%;
+  background-color: hsla(340, 100%, 49%, 0.185);
+  z-index: 1010101010
+}
+
+
+#col-10 {
+  position: fixed;
+  width: 50%;
+  left: 45%;
+  height: 100%;
+  background-color: hsla(182, 100%, 50%, 0.212);
+  z-index: 1010101010
+}
+
+#col-11 {
+  position: fixed;
+  width: 50%;
+  left: 50%;
+  height: 100%;
+  background-color: hsla(340, 100%, 49%, 0.185);
+  z-index: 1010101010
+}
+#col-12 {
+  position: fixed;
+  width: 50%;
+  left: 55%;
+  height: 100%;
+  background-color: hsla(182, 100%, 50%, 0.212);
+  z-index: 1010101010
+}
+
+
